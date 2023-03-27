@@ -2,6 +2,20 @@
   import logo from './assets/svelte.png'
   import './lib/TailwindCSS.svelte'
   import ExampleComponent from './ExampleComponent.svelte'
+
+  /**
+   * Component name property
+   * @type string
+   * */
+  let name
+
+  /** @type {import('$lib/types').Action} */
+  let action;
+
+  const fn = function () {
+    name = action.label
+  }
+
 </script>
 
 <main>
@@ -9,6 +23,9 @@
 
   <ExampleComponent data={{a: 1, b: 1, operation: 'sum'}} />
 
+  <div>{name}</div>
+
+  <div>{action.link}</div>
 </main>
 
 <style>

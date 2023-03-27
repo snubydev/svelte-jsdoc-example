@@ -9,6 +9,7 @@
   /** @type {Options}*/
   export let data = {a: 0, b: 0, operation: ''}
 
+
   /** @type {number} */
   let result = data.a
 
